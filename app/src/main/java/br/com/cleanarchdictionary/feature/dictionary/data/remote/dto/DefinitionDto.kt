@@ -17,7 +17,7 @@ data class DefinitionDto(
     fun toDefinition() = Definition(
         antonyms = this.antonyms ?: emptyList(),
         definition = this.definition ?: "",
-        example = this.example ?: "",
+        example = this.example,
         synonyms = this.synonyms ?: emptyList()
     )
 }

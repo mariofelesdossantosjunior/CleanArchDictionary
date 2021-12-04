@@ -28,7 +28,7 @@ class WordInfoRepositoryImpl(
         } catch (e: HttpException) {
             emit(
                 Resource.Error(
-                    message = "Oops, something went wrong!.",
+                    message = "Oops, something went wrong!",
                     data = wordInfos
                 )
             )
