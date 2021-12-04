@@ -38,7 +38,8 @@ class WordInfoViewModel @Inject constructor(
 
         searchJob = viewModelScope.launch {
             delay(500L)
-            getWordInfo.invoke(query).onEach { result ->
+            getWordInfo(query)
+                .onEach { result ->
                 when (result) {
                     is Resource.Success -> {
                         _state.value = state.value.copy(
