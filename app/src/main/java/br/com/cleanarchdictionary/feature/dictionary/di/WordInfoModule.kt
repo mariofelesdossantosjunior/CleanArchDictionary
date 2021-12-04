@@ -2,6 +2,7 @@ package br.com.cleanarchdictionary.feature.dictionary.di
 
 import android.app.Application
 import androidx.room.Room
+import br.com.cleanarchdictionary.feature.dictionary.data.local.Converters
 import br.com.cleanarchdictionary.feature.dictionary.data.local.WordInfoDatabase
 import br.com.cleanarchdictionary.feature.dictionary.data.remote.DictionaryApi
 import br.com.cleanarchdictionary.feature.dictionary.data.repository.WordInfoRepositoryImpl
@@ -43,7 +44,7 @@ object WordInfoModule {
             app,
             WordInfoDatabase::class.java,
             "word_db"
-        ).addTypeConverter(GsonParser(Gson()))
+        ).addTypeConverter(Converters(GsonParser(Gson())))
             .build()
     }
 
