@@ -3,6 +3,5 @@ package br.com.cleanarchdictionary
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
-
 @HiltAndroidApp
-class DictionaryApp: Application()
+class DictionaryApp : Application()
